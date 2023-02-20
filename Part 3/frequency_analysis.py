@@ -34,16 +34,16 @@ def attempt_frequency_analysis(filename="Rowley.dat"):
     print(ciphertext_character_frequencies)
     print(english_character_frequencies)
 
-    # plaintext = ""
-    # for character in ciphertext:
-    #     index = get_frequency_index(character, ciphertext_character_frequencies)
-    #     if index != None:
-    #         # print(f"Ciphertext: '{character}' | Index: {index} | Plaintext: {english_character_frequencies[index][0]}")
-    #         plaintext += english_character_frequencies[index][0]
-    #     else:
-    #         plaintext += character
-    #
-    # print(plaintext)
+    plaintext = ""
+    for character in ciphertext:
+        index = get_frequency_index(character, ciphertext_character_frequencies)
+        if index != None:
+            # print(f"Ciphertext: '{character}' | Index: {index} | Plaintext: {english_character_frequencies[index][0]}")
+            plaintext += english_character_frequencies[index][0]
+        else:
+            plaintext += character
+
+    print(plaintext)
 
 
 def get_frequency_index(character: str, ciphertext_character_frequencies: list):
